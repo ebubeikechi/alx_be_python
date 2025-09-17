@@ -6,7 +6,7 @@ def main():
 
         print('Wear a t-shirt and sunglasses.')
 
-    elif user_input.lower() == "rainy":
+    elif user_input == "rainy":
         print("Don't forget your umbrella and a raincoat.")
 
     elif user_input.lower() == "cold":
