@@ -1,0 +1,33 @@
+
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
+
+def convert_to_celsius(fahrenheit):
+    celcius_value = fahrenheit * FAHRENHEIT_TO_CELSIUS_FACTOR - (160/9)
+    print(f"{fahrenheit}°F is {celcius_value}°C")
+    return
+
+def convert_to_fahrenheit(celsius):
+    fahrenheit_value = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
+    print(f"{celsius}°C is {fahrenheit_value}°F")
+    return
+
+
+def main():
+    temp_value = float(input("Enter the temperature to convert: "))
+    conversion_choice = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+    
+    match conversion_choice:
+        case 'F':
+            convert_to_celsius(temp_value)
+            return
+        case 'C':
+            convert_to_fahrenheit(temp_value)
+            return
+        case _:
+            print("invalid conversion choice")
+            return
+    return
+
+if __name__ == "__main__":
+    main()
