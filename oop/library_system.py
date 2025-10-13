@@ -7,7 +7,7 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            print(f"{book}: {book.title} by {book.author}")
+            print(book)
 
 
 class Book:
@@ -16,10 +16,10 @@ class Book:
         self.author = author
 
     def __repr__(self):
-        return "Book"
+        return f"Book(title={self.title!r}, author={self.author!r})"
     
     def __str__(self):
-        pass
+        return f"{self.__class__.__name__}: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -28,10 +28,11 @@ class EBook(Book):
         self.file_size = file_size
 
     def __repr__(self):
-        return "EBook"
-    
+        return f"EBook(title={self.title!r}, author={self.author!r}, file_size={self.file_size})"
+
     def __str__(self):
-        pass
+        return f"{self.__class__.__name__}: {self.title} by {self.author}"
+
 
 
 class PrintBook(Book):
@@ -40,10 +41,10 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __repr__(self):
-        return "PrintBook"
+        return f"PrintBook(title={self.title!r}, author={self.author!r}, file_size={self.page_count})"
     
     def __str__(self):
-        pass
+        return f"{self.__class__.__name__}: {self.title} by {self.author}"
 
 
 # def main():
