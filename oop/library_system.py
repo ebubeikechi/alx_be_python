@@ -31,7 +31,7 @@ class EBook(Book):
         return f"EBook(title={self.title!r}, author={self.author!r}, File Size:={self.file_size})"
 
     def __str__(self):
-        return f"{self.__class__.__name__}: {self.title} by {self.author}, File Size: {self.file_size}"
+        return f"{self.__class__.__name__}: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 
