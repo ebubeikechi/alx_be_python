@@ -17,6 +17,9 @@ class Book:
 
     def __repr__(self):
         return "Book"
+    
+    def __str__(self):
+        pass
 
 
 class EBook(Book):
@@ -26,6 +29,9 @@ class EBook(Book):
 
     def __repr__(self):
         return "EBook"
+    
+    def __str__(self):
+        pass
 
 
 class PrintBook(Book):
@@ -35,6 +41,9 @@ class PrintBook(Book):
 
     def __repr__(self):
         return "PrintBook"
+    
+    def __str__(self):
+        pass
 
 
 # def main():
